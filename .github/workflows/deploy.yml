@@ -1,11 +1,9 @@
 name: Deploy to Cloudflare Workers
 
 on:
-  # Auto-deploy after upstream sync
   workflow_run:
     workflows: ["Upstream Sync"]
     types: [completed]
-  # Manual trigger
   workflow_dispatch:
 
 jobs:
@@ -23,3 +21,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        env:
+          UUID: ${{ secrets.UUID }}
+          ADMIN: ${{ secrets.ADMIN }}
