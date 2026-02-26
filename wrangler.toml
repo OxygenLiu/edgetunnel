@@ -3,10 +3,6 @@ main = "_worker.js"
 compatibility_date = "2025-11-04"
 keep_vars = true
 
-[vars]
-UUID = "5679190a-31ab-4178-ac55-7092b9f810a4"
-ADMIN = "5679190a"
-
 [[kv_namespaces]]
 binding = "KV"
 id = "496e3b91f50b4704b965d93dfdfda89c"
